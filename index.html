@@ -5,13 +5,17 @@
     <title>Travel app</title>
     <link type="text/css" rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <!-------------------- HEADER --------------------->
 <div class="navbar">
     <ul>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="register.html">Register</a></li>
+        <li><button id="btn-nav-login">Login</button></li>
+        <li><button id="btn-nav-register">Register</button></li>
     </ul>
 </div>
 
@@ -31,7 +35,6 @@
         <input id="lbl-oneWay" name="trip" type="radio">
         <label for="lbl-roundTrip">Round trip</label>
         <input id="lbl-roundTrip" name="trip" type="radio">
-
         <input type="submit" value="Search for flight">
     </form>
 </div>
@@ -39,6 +42,7 @@
 <!------------------ MAIN ------------------------------->
 
 <div class="main">
+    <div id="wdw-offers"></div>
     <div id="wdw-search-results" class="wdw">
         <div class="flight">
             <div class="flight-date">Date</div>
@@ -77,10 +81,56 @@
             <div class="flight-price">230 <span class="currency">DKK</span></div>
         </div>
     </div>
-    <div id="wdw-register" class="wdw"></div>
-    <div id="wdw-login" class="wdw"></div>
+    <div id="wdw-register" class="wdw">register</div>
+    <div id="wdw-login" class="wdw">
+        <input type="text" id="lbl-username" placeholder="username">
+        <input type="text" id="lbl-password" placeholder="password">
+        <input type="submit" id="btn-login" value="Log in">
+        <div id="login-error-msg"></div>
+    </div>
+    <div id="wdw-profile" class="wdw">
+        <span id="welcome-msg"></span>
+    </div>
 </div>
 
 
+
+<script>
+
+    $("#btn-nav-login").click(function(){
+        $(".wdw").css("display","none");
+        $("#wdw-login").css("display","flex");
+    });
+    $("#btn-nav-register").click(function(){
+        $(".wdw").css("display","none");
+        $("#wdw-register").css("display","flex");
+    });
+
+    $("#btn-login").click(function(){
+        var username = $("#lbl-username").val();
+        var password = $("#lbl-password").val();
+        $.ajax({
+            "url":"services/login.php",
+            "method":"post",
+            "data":{"username":username,"password":password},
+            "dataType":"JSON",
+            "cache":false
+        }).done(function(jData){
+            if(jData.status == "ok"){
+                displayProfile(jData);
+            }else{
+                $("#login-error-msg").text("No such user found");
+            }
+        })
+    });
+
+function displayProfile(jData){
+    $(".wdw").css("display","none");
+    $("#wdw-profile").css("display","flex");
+    $("#welcome-msg").text("Hello "+jData.username);
+    $(".navbar").empty().append("<button id='btn-logout'>Logout</button>");
+}
+
+</script>
 </body>
 </html>
