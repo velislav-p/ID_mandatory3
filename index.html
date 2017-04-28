@@ -5,6 +5,10 @@
     <title>Travel app</title>
     <link type="text/css" rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
 </head>
 <body>
 <!-------------------- HEADER --------------------->
@@ -82,5 +86,51 @@
 </div>
 
 
+<!------------------ REGISTER ------------------------------->
+
+<div class="form-groupRegister">
+    <input type="text" id="field-register" placeholder="Please type in the account name you desire">
+    <input type="password" id="field-password" placeholder="Type in desired password">
+    <btn id="btnSubmitRegistration">Submit</btn>
+</div>
+
+<script>
+
+    $("#btnSubmitRegistration").click(function(){
+
+
+    var fieldRegister = $("#field-register").val();
+    var fieldPassword = $("field-password").val();
+
+    $.ajax({
+
+        "url":"services/register.php",
+        cache:false ,
+        "method":"post",
+        "dataType":"JSON",
+        "data":  {"username":fieldRegister , "password": fieldPassword} 
+
+    }).done(function () {
+        
+        $.ajax({
+            
+            "url":"services/login.php" ,
+            cache: false , 
+            "method":"post",
+            "dataType":"JSON" ,
+            "data": {"username":fieldRegister, "password":fieldPassword}
+        }).done(function () {
+            
+        })
+        
+    })
+
+
+
+
+        });
+
+</script>
 </body>
+
 </html>
