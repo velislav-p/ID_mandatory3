@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel app</title>
+    <link type="text/css" rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<!-------------------- HEADER --------------------->
+<div class="navbar">
+    <ul>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+    </ul>
+</div>
+
+<!------------------- SIDE BAR ------------------------->
+
+<div class="sidebar">
+    <form>
+        <label for="lbl-from">From</label>
+        <input id="lbl-from" type="text">
+        <label for="lbl-to">To</label>
+        <input id="lbl-to" type="text">
+        <label for="lbl-departure">Departure date</label>
+        <input id="lbl-departure" type="text">
+        <label for="lbl-return">Return date</label>
+        <input id="lbl-return" type="text">
+        <label for="lbl-oneWay">One way</label>
+        <input id="lbl-oneWay" name="trip" type="radio">
+        <label for="lbl-roundTrip">Round trip</label>
+        <input id="lbl-roundTrip" name="trip" type="radio">
+
+        <input type="submit" value="Search for flight">
+    </form>
+</div>
+
+<!------------------ MAIN ------------------------------->
+
+<div class="main">
+    <div id="wdw-search-results" class="wdw">
+        <div class="flight">
+            <div class="flight-date">Date</div>
+            <div class="flight-body">
+                <span class="flight-departure-time">23.00</span>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                <span class="flight-arrival-time">01.00</span>
+            </div>
+            <div class="flight-price">230 <span class="currency">DKK</span></div>
+        </div>
+        <div class="flight">
+            <div class="flight-date">Date</div>
+            <div class="flight-body">
+                <span class="flight-departure-time">23.00</span>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                <span class="flight-arrival-time">01.00</span>
+            </div>
+            <div class="flight-price">230 <span class="currency">DKK</span></div>
+        </div>
+        <div class="flight">
+            <div class="flight-date">Date</div>
+            <div class="flight-body">
+                <span class="flight-departure-time">23.00</span>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                <span class="flight-arrival-time">01.00</span>
+            </div>
+            <div class="flight-price">230 <span class="currency">DKK</span></div>
+        </div>
+        <div class="flight">
+            <div class="flight-date">Date</div>
+            <div class="flight-body">
+                <span class="flight-departure-time">23.00</span>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                <span class="flight-arrival-time">01.00</span>
+            </div>
+            <div class="flight-price">230 <span class="currency">DKK</span></div>
+        </div>
+    </div>
+    <div id="wdw-register" class="wdw"></div>
+    <div id="wdw-login" class="wdw"></div>
+</div>
+
+
+</body>
+</html>
