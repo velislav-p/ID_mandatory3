@@ -5,7 +5,6 @@
     <title>Travel app</title>
     <link type="text/css" rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -15,8 +14,8 @@
 <!-------------------- HEADER --------------------->
 <div class="navbar">
     <ul>
-        <li><button id="btn-nav-login" class="btn btn-success">Login</button></li>
-        <li><button id="btn-nav-register" class="btn btn-success">Register</button></li>
+        <li><button id="btn-nav-login">Login</button></li>
+        <li><button id="btn-nav-register">Register</button></li>
     </ul>
 </div>
 
@@ -36,8 +35,8 @@
         <input id="lbl-oneWay" name="trip" type="radio">
         <label for="lbl-roundTrip">Round trip</label>
         <input id="lbl-roundTrip" name="trip" type="radio">
-        <input type="submit" class="btn btn-success" value="Search for flight">
     </form>
+    <button id="btn-search-flight">Search for flight</button>
 </div>
 
 <!------------------ MAIN ------------------------------->
@@ -86,7 +85,7 @@
     <div id="wdw-login" class="wdw">
         <input type="text" id="lbl-username" placeholder="username">
         <input type="text" id="lbl-password" placeholder="password">
-        <input type="submit" id="btn-login" class="btn btn-success" value="Log in">
+        <input type="submit" id="btn-login" value="Log in">
         <div id="login-error-msg"></div>
     </div>
     <div id="wdw-profile" class="wdw">
@@ -94,14 +93,12 @@
     </div>
 </div>
 
-
-<<<<<<< HEAD
 <!------------------ REGISTER ------------------------------->
 
 <div class="form-groupRegister">
     <input type="text" id="field-register" placeholder="Please type in the account name you desire">
     <input type="password" id="field-password" placeholder="Type in desired password">
-    <btn id="btnSubmitRegistration" >Submit</btn>
+    <button id="btnSubmitRegistration">Submit</button>
 </div>
 
 <script>
@@ -110,35 +107,26 @@
 
 
     var fieldRegister = $("#field-register").val();
-    var fieldPassword = $("field-password").val();
+    var fieldPassword = $("#field-password").val();
 
     $.ajax({
-
         "url":"services/register.php",
         cache:false ,
         "method":"post",
         "dataType":"JSON",
         "data":  {"username":fieldRegister , "password": fieldPassword}
-
     }).done(function () {
-
         $.ajax({
-
             "url":"services/login.php" ,
-            cache: false ,
+            cache: false , 
             "method":"post",
             "dataType":"JSON" ,
             "data": {"username":fieldRegister, "password":fieldPassword}
         }).done(function () {
-
+            
         })
-
     })
-
-
-
-
-        });
+    });
 
     $("#btn-nav-login").click(function(){
         $(".wdw").css("display","none");
@@ -174,7 +162,9 @@ function displayProfile(jData){
     $(".navbar").empty().append("<button id='btn-logout'>Logout</button>");
 }
 
-
+$("#btn-search-flight").click(function(){
+    $("#wdw-search-results").css("display","flex");
+});
 </script>
 </body>
 
