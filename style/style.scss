@@ -37,7 +37,7 @@ body{
   padding:10px;
 
 }
-.sidebar form {
+.sidebar{
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -81,6 +81,9 @@ body{
 
 }
 #btn-logout{
+  display:none;
+}
+.search-form-full{
   display:none;
 }
 
