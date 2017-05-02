@@ -32,9 +32,9 @@
         <span>Return date</span>
         <input class="lbl-return" type="text">
         <span>One way</span>
-        <input class="lbl-oneWay" name="trip" type="radio">
+        <input class="lbl-oneWay" name="trip" type="radio" value="One way">
         <span>Round trip</span>
-        <input class="lbl-roundTrip" name="trip" type="radio">
+        <input class="lbl-roundTrip" name="trip" type="radio" value="Round trip">
     </form>
     <button class="btn-search-flight">Search for flight</button>
 </div>
@@ -194,6 +194,15 @@
             $(".nav-button").css("display","flex");
             $("#btn-logout").css("display","none");
         })
+    });
+    $(".btn-search-flight").click(function() {
+        var from = $(".lbl-from").val();
+        var to = $(".lbl-to").val();
+        var depDate = $(".lbl-departure").val();
+        var arrDate = $(".lbl-return").val();
+        var tripType = document.querySelector('input[name="trip"]:checked').value;
+
+        $("#lbl-from").append(from);
     })
 
 </script>

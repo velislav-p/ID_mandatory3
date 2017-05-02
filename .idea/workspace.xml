@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7799cf6-a2c6-4ebd-a7d9-156d8ccd468d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
@@ -27,22 +28,25 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+            <state relative-caret-position="553">
+              <caret line="204" column="36" selection-start-line="204" selection-start-column="36" selection-end-line="204" selection-end-column="36" />
               <folding>
-                <marker date="1493711007946" expanded="false" signature="2089:3812" ph="..." />
-                <marker date="1493711007946" expanded="false" signature="3903:4153" ph="..." />
-                <marker date="1493711007946" expanded="false" signature="4192:4242" ph="..." />
+                <marker date="1493713017104" expanded="false" signature="2124:3847" ph="..." />
+                <marker date="1493713017104" expanded="false" signature="3938:4188" ph="..." />
+                <marker date="1493713017104" expanded="false" signature="4227:4277" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/services/logout.php">
+      <file leaf-file-name="style.css.map" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/style/style.css.map">
+          <provider editor-type-id="sourcemapFileViewerProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="payment.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/payment.html">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -101,7 +105,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/style/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
+            <state relative-caret-position="366">
               <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
               <folding />
             </state>
@@ -154,6 +158,7 @@
         <option value="$PROJECT_DIR$/style/style.scss" />
         <option value="$PROJECT_DIR$/style/style.css" />
         <option value="$PROJECT_DIR$/style/media-queries.scss" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -215,24 +220,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="InterfaceDesignMandatory" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InterfaceDesignMandatory" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="InterfaceDesignMandatory" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="style.scss" />
-              <option name="myItemType" value="com.intellij.plugins.watcher.projectView.NestingTreeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -469,7 +456,7 @@
       <workItem from="1490596405912" duration="7021000" />
       <workItem from="1493367591148" duration="7080000" />
       <workItem from="1493374677210" duration="93000" />
-      <workItem from="1493625895013" duration="10719000" />
+      <workItem from="1493625895013" duration="12538000" />
     </task>
     <task id="LOCAL-00001" summary="gitignore">
       <created>1493369399084</created>
@@ -506,17 +493,24 @@
       <option name="project" value="LOCAL" />
       <updated>1493710794897</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="testing">
+      <created>1493711025206</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1493711025206</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36532000" />
+    <option name="totallyTimeSpent" value="38351000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13560411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22750643" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5115681" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -552,7 +546,8 @@
     <MESSAGE value="search results show" />
     <MESSAGE value="early morning push" />
     <MESSAGE value="search-form and comments in JS" />
-    <option name="LAST_COMMIT_MESSAGE" value="search-form and comments in JS" />
+    <MESSAGE value="testing" />
+    <option name="LAST_COMMIT_MESSAGE" value="testing" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -564,9 +559,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493711007946" expanded="false" signature="2089:3812" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="3903:4153" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="4192:4242" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="2124:3847" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="3938:4188" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="4227:4277" ph="..." />
           </folding>
         </state>
       </provider>
@@ -640,9 +635,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493711007946" expanded="false" signature="2089:3812" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="3903:4153" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="4192:4242" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="2124:3847" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="3938:4188" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="4227:4277" ph="..." />
           </folding>
         </state>
       </provider>
@@ -716,9 +711,9 @@
         <state relative-caret-position="1173">
           <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
           <folding>
-            <marker date="1493711007946" expanded="false" signature="2089:3812" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="3903:4153" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="4192:4242" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="2124:3847" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="3938:4188" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="4227:4277" ph="..." />
           </folding>
         </state>
       </provider>
@@ -752,9 +747,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493711007946" expanded="false" signature="2089:3812" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="3903:4153" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="4192:4242" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="2124:3847" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="3938:4188" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="4227:4277" ph="..." />
           </folding>
         </state>
       </provider>
@@ -772,9 +767,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493711007946" expanded="false" signature="2089:3812" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="3903:4153" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="4192:4242" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="2124:3847" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="3938:4188" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="4227:4277" ph="..." />
           </folding>
         </state>
       </provider>
@@ -800,22 +795,14 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1493711007946" expanded="false" signature="2089:3812" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="3903:4153" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="4192:4242" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="2124:3847" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="3938:4188" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="4227:4277" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/login.html" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/services/logout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -847,14 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -891,14 +870,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style/style.css.map">
+      <provider editor-type-id="sourcemapFileViewerProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+        <state relative-caret-position="553">
+          <caret line="204" column="36" selection-start-line="204" selection-start-column="36" selection-end-line="204" selection-end-column="36" />
           <folding>
-            <marker date="1493711007946" expanded="false" signature="2089:3812" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="3903:4153" ph="..." />
-            <marker date="1493711007946" expanded="false" signature="4192:4242" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="2124:3847" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="3938:4188" ph="..." />
+            <marker date="1493713017104" expanded="false" signature="4227:4277" ph="..." />
           </folding>
         </state>
       </provider>
