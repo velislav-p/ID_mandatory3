@@ -100,6 +100,11 @@
         </div>
     </div>
     <div id="wdw-register" class="wdw">register</div>
+    <div class="form-groupRegister">
+        <input type="text" id="field-register" placeholder="Please type in the account name you desire">
+        <input type="password" id="field-password" placeholder="Type in desired password">
+        <input type="submit" id="btn-registration">
+    </div>
     <div id="wdw-login" class="wdw">
         <input type="text" id="lbl-username" placeholder="username">
         <input type="text" id="lbl-password" placeholder="password">
@@ -112,17 +117,10 @@
 
 </div>
 
-<!------------------ REGISTER ------------------------------->
-
-<div class="form-groupRegister">
-    <input type="text" id="field-register" placeholder="Please type in the account name you desire">
-    <input type="password" id="field-password" placeholder="Type in desired password">
-    <button id="btnSubmitRegistration">Submit</button>
-</div>
-<div id="test">THIS IS A CHANGE</div>
+<!------------------------JAVA---------------------->
 <script>
 //--------------- REGISTER ----------------------------------------------
-    $("#btnSubmitRegistration").click(function(){
+    $("#btn-registration").click(function(){
 
     var fieldRegister = $("#field-register").val();
     var fieldPassword = $("#field-password").val();
@@ -132,17 +130,12 @@
         cache:false ,
         "method":"post",
         "dataType":"JSON",
+
         "data":  {"username":fieldRegister , "password": fieldPassword}
     }).done(function () {
-        $.ajax({
-            "url":"services/login.php" ,
-            cache: false , 
-            "method":"post",
-            "dataType":"JSON" ,
-            "data": {"username":fieldRegister, "password":fieldPassword}
-        }).done(function () {
-            
-        })
+
+        displayProfile(jData);
+
     })
     });
 
