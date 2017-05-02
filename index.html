@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <title>Travel app</title>
     <link type="text/css" rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script
             src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -14,8 +16,8 @@
 <!-------------------- HEADER --------------------->
 <div class="navbar">
     <ul>
-        <li><button id="btn-nav-login">Login</button></li>
-        <li><button id="btn-nav-register">Register</button></li>
+        <li><button id="btn-nav-login" class="btn btn-success">Login</button></li>
+        <li><button id="btn-nav-register" class="btn btn-success">Register</button></li>
     </ul>
 </div>
 
@@ -23,18 +25,18 @@
 
 <div class="sidebar search-form-empty">
         <span>From</span>
-        <input class="lbl-from" type="text">
+        <input class="lbl-from form-control" type="text">
         <span>To</span>
-        <input class="lbl-to" type="text">
+        <input class="lbl-to form-control" type="text">
         <span>Departure date</span>
-        <input class="lbl-departure" type="text">
+        <input class="lbl-departure form-control" type="text">
         <span>Return date</span>
-        <input class="lbl-return" type="text">
+        <input class="lbl-return form-control" type="text">
         <span>One way</span>
         <input class="lbl-oneWay" name="trip" type="radio" value="One way">
         <span>Round trip</span>
         <input class="lbl-roundTrip" name="trip" type="radio" value="Round trip">
-    <button class="btn-search-flight">Search for flight</button>
+    <button class="btn-search-flight btn btn-warning">Search for flight</button>
 </div>
 
 <div class="sidebar search-form-full">
@@ -47,7 +49,7 @@
         <span>Return date</span>
         <span id="lbl-return"></span>
         <span id="lbl-trip-type"></span>
-    <button id="btn-change-search-details">Change details</button>
+    <button id="btn-change-search-details" class="btn btn-warning">Change details</button>
 </div>
 
 <!------------------ MAIN ------------------------------->
@@ -93,14 +95,14 @@
         </div>
     </div>
     <div id="wdw-register" class="wdw">
-        <input type="text" id="field-register" placeholder="Please type in the account name you desire">
-        <input type="password" id="field-password" placeholder="Type in desired password">
-        <input type="submit" id="btn-registration">
+        <input type="text" id="field-register" class="form-control hidden-input" placeholder="Please type in the account name you desire">
+        <input type="password" id="field-password" class="form-control hidden-input" placeholder="Type in desired password">
+        <input type="submit" id="btn-registration" class="btn btn-warning">
     </div>
     <div id="wdw-login" class="wdw">
-        <input type="text" id="lbl-username" placeholder="username">
-        <input type="text" id="lbl-password" placeholder="password">
-        <input type="submit" id="btn-login" value="Log in">
+        <input type="text" id="lbl-username" class="form-control hidden-input" placeholder="username">
+        <input type="text" id="lbl-password" class="form-control hidden-input" placeholder="password">
+        <input type="submit" id="btn-login" class="btn btn-warning" value="Log in">
         <div id="login-error-msg"></div>
     </div>
     <div id="wdw-profile" class="wdw">
@@ -162,7 +164,7 @@
         $(".wdw").css("display","none");
         $("#wdw-profile").css("display","flex");
         $("#welcome-msg").text("Hello "+jData.username);
-        $(".navbar").empty().append("<button id='btn-logout'>Logout</button>");
+        $(".navbar").empty().append("<button id='btn-logout' class='btn btn-danger'>Logout</button>");
     }
 //--------------- BUTTON CLICKS -----------------------------------------------------
     $("#btn-search-flight").click(function(){
