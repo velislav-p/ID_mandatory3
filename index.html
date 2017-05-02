@@ -165,6 +165,18 @@ function displayProfile(jData){
 $("#btn-search-flight").click(function(){
     $("#wdw-search-results").css("display","flex");
 });
+
+    $(document).on("click","#btn-logout",function(){
+        $.ajax({
+            "url":"services/logout.php",
+            "method":"get"
+        }).done(function(){
+            $(".wdw").css("display","none");
+            $("#wdw-offers").css("display","flex");
+            $(".nav-button").css("display","flex");
+            $("#btn-logout").css("display","none");
+        })
+    })
 </script>
 </body>
 

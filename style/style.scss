@@ -72,11 +72,11 @@ body{
 }
 .flight-price{
   background-color:$transition-color;
-  width:30%;
+  width:30%;  
 
 }
+#btn-logout{
+  display:none;
+}
 
-
-
-
-@import "media-queries";
+@import "media-queries.scss";
