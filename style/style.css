@@ -99,8 +99,9 @@ body {
   .sidebar {
     max-width: 250px; }
 
-  #search-results {
-    width: 100%; }
+  #wdw-search-results {
+    width: 100%;
+    flex-direction: row; }
 
   .flight {
     width: 24%; }

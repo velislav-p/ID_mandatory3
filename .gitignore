@@ -1,3 +1,4 @@
 .idea
 '.idea'
-services/connection.php
+.node_modules/
+.gulpfile.js
