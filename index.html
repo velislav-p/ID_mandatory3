@@ -116,6 +116,7 @@
 
     var fieldRegister = $("#field-register").val();
     var fieldPassword = $("#field-password").val();
+    //console.log("x");
 
     $.ajax({
         "url":"services/register.php",
@@ -124,7 +125,7 @@
         "dataType":"JSON",
 
         "data":  {"username":fieldRegister , "password": fieldPassword}
-    }).done(function () {
+    }).done(function (jData) {
 
         displayProfile(jData);
 

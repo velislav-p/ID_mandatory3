@@ -2,14 +2,19 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
 
-    $asUsers = file_get_contents("services/users.txt");
+    $asUsers = file_get_contents("users.txt");
     $ajUsers = json_decode($asUsers);
 
+    $newUser = new stdClass();
 
-    array_push($ajUsers , $jUser);
+    $newUser->username = $username;
+    $newUser->password = $password;
+
+    array_push($ajUsers , $newUser);
 
 
     $asUsers = json_encode($ajUsers);
-    file_put_contents("../services/user.txt", $asUsers);
+    file_put_contents("users.txt", $asUsers);
 
+    echo json_encode($newUser);
 ?>
