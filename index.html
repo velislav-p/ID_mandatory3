@@ -106,6 +106,57 @@
     <div id="wdw-profile" class="wdw">
         <span id="welcome-msg"></span>
     </div>
+    <div class="wdw-payment wdw">
+        <form>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentName">Write your Name:</label>
+                <input type="text" id="paymentName" class="form-control" placeholder="Name">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentsurname">Write your Surname:</label>
+                <input type="text" id="paymentSurname" class="form-control" placeholder="Surname">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentEmail">Write your E-mail here:</label>
+                <input type="text" id="paymentEmail" class="form-control" placeholder="E-mail">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentCVR">Please type you company CVR here if available:</label>
+                <input type="text" id="paymentCVR" class="form-control" placeholder="CVR/ COMPANY ID">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentCreditCardNumber">Enter you're credit card number here:</label>
+                <input type="text" id="paymentCreditCardNumber" class="form-control" placeholder="Credit card number">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentCreditCardDate">Enter you're credit cards expiration date:</label>
+                <input type="text" id="paymentCreditCardDate" class="form-control" placeholder="Credit card expiration date">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentCreditCardCVV">Enter the security number found on the back of your card:</label>
+                <input type="text" id="paymentCreditCardCVV" class="form-control" placeholder="CVV number">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentAdress">In the field below type in your adress:</label>
+                <input type="text" id="paymentAdress" class="form-control" placeholder="Adress">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentAreaCode">Enter area code:</label>
+                <input type="text" id="paymentAreaCode" class="form-control" placeholder="Area code">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentCity">Enter city:</label>
+                <input type="text" id="paymentCity" class="form-control" placeholder="City">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentTelephoneNumber">Enter telephone number:</label>
+                <input type="text" id="paymentTelephoneNumber" class="form-control" placeholder="Telephone #">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <input type="button" class="btn btn-warning" id="btnSubmit" value="Submit!">
+            </div>
+        </form>
+    </div>
 
 </div>
 
@@ -207,7 +258,7 @@
         $("#flight-details").append("<div id='price'>Price: <span>"+price+"</span></div>");
 
         $(".wdw").hide();
-        $("")
+        $(".wdw-payment").css("display","flex");
     })
 </script>
 </body>
