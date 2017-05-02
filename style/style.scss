@@ -27,12 +27,21 @@ body{
   list-style:none;
 }
 
+.wdw-payment {
+  padding: 5px !important;
+}
+
+.wdw-payment-InputArea {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
 .sidebar {
   background-color: $highlight-color;
   padding:10px;
 
 }
-.sidebar form {
+.sidebar{
   display:flex;
   flex-direction:column;
   justify-content:center;
@@ -72,10 +81,13 @@ body{
 }
 .flight-price{
   background-color:$transition-color;
-  width:30%;  
+  width:30%;
 
 }
 #btn-logout{
+  display:none;
+}
+.search-form-full{
   display:none;
 }
 

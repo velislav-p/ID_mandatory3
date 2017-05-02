@@ -22,7 +22,6 @@
 <!------------------- SIDE BAR ------------------------->
 
 <div class="sidebar search-form-empty">
-    <form>
         <span>From</span>
         <input class="lbl-from" type="text">
         <span>To</span>
@@ -32,15 +31,13 @@
         <span>Return date</span>
         <input class="lbl-return" type="text">
         <span>One way</span>
-        <input class="lbl-oneWay" name="trip" type="radio">
+        <input class="lbl-oneWay" name="trip" type="radio" value="One way">
         <span>Round trip</span>
-        <input class="lbl-roundTrip" name="trip" type="radio">
-    </form>
+        <input class="lbl-roundTrip" name="trip" type="radio" value="Round trip">
     <button class="btn-search-flight">Search for flight</button>
 </div>
 
 <div class="sidebar search-form-full">
-    <form>
         <span>From</span>
         <span id="lbl-from"></span>
         <span>To</span>
@@ -49,12 +46,8 @@
         <span id="lbl-departure"></span>
         <span>Return date</span>
         <span id="lbl-return"></span>
-        <span>One way</span>
-        <span id="lbl-oneWay"></span>
-        <span>Round trip</span>
-        <span id="lbl-roundTrip"></span>
-    </form>
-    <button id="btn-search-flight">Search for flight</button>
+        <span id="lbl-trip-type"></span>
+    <button id="btn-change-search-details">Change details</button>
 </div>
 
 <!------------------ MAIN ------------------------------->
@@ -187,6 +180,21 @@
             $(".nav-button").css("display","flex");
             $("#btn-logout").css("display","none");
         })
+    });
+    $(".btn-search-flight").click(function() {
+        var from = $(".lbl-from").val();
+        var to = $(".lbl-to").val();
+        var depDate = $(".lbl-departure").val();
+        var arrDate = $(".lbl-return").val();
+        var tripType = document.querySelector('input[name="trip"]:checked').value;
+
+        $(".search-form-empty").css("display","none");
+        $(".search-form-full").css("display","flex");
+        $("#lbl-from").append(from);
+        $("#lbl-to").append(to);
+        $("#lbl-departure").append(depDate);
+        $("#lbl-return").append(arrDate);
+        $("#lbl-trip-type").append(tripType);
     })
 
 </script>
