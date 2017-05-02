@@ -58,14 +58,12 @@ body {
   background-color: #F2ae72;
   width: 30%; }
 
-#btn-logout {
-  display: none; }
-
 @media only screen and (min-width: 480px) {
   body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
+
   .navbar {
     width: 100%;
     display: flex;
@@ -74,35 +72,47 @@ body {
       display: flex;
       width: 25%;
       justify-content: space-between; }
+
   #search-results {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; }
+
   .sidebar {
     width: 30%; }
+
   .main {
     width: 60%; }
+
   .flight {
     width: 49%; }
+
   .currency {
     font-size: 0.5em; } }
-
 @media only screen and (min-width: 768px) {
   .main {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 64%; }
+
   .sidebar {
     max-width: 250px; }
-  #search-results {
-    width: 100%; }
+
+  #wdw-search-results {
+    width: 100%;
+    flex-direction: row; }
+
   .flight {
     width: 24%; }
+
   .flight-body {
     flex-direction: column; }
+
   .flight-price {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; } }
+
+/*# sourceMappingURL=style.css.map */
