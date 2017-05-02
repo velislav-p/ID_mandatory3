@@ -21,20 +21,38 @@
 
 <!------------------- SIDE BAR ------------------------->
 
-<div class="sidebar">
+<div class="sidebar search-form-empty">
     <form>
-        <label for="lbl-from">From</label>
-        <input id="lbl-from" type="text">
-        <label for="lbl-to">To</label>
-        <input id="lbl-to" type="text">
-        <label for="lbl-departure">Departure date</label>
-        <input id="lbl-departure" type="text">
-        <label for="lbl-return">Return date</label>
-        <input id="lbl-return" type="text">
-        <label for="lbl-oneWay">One way</label>
-        <input id="lbl-oneWay" name="trip" type="radio">
-        <label for="lbl-roundTrip">Round trip</label>
-        <input id="lbl-roundTrip" name="trip" type="radio">
+        <span>From</span>
+        <input class="lbl-from" type="text">
+        <span>To</span>
+        <input class="lbl-to" type="text">
+        <span>Departure date</span>
+        <input class="lbl-departure" type="text">
+        <span>Return date</span>
+        <input class="lbl-return" type="text">
+        <span>One way</span>
+        <input class="lbl-oneWay" name="trip" type="radio">
+        <span>Round trip</span>
+        <input class="lbl-roundTrip" name="trip" type="radio">
+    </form>
+    <button class="btn-search-flight">Search for flight</button>
+</div>
+
+<div class="sidebar search-form-full">
+    <form>
+        <span>From</span>
+        <span id="lbl-from"></span>
+        <span>To</span>
+        <span id="lbl-to"></span>
+        <span>Departure date</span>
+        <span id="lbl-departure"></span>
+        <span>Return date</span>
+        <span id="lbl-return"></span>
+        <span>One way</span>
+        <span id="lbl-oneWay"></span>
+        <span>Round trip</span>
+        <span id="lbl-roundTrip"></span>
     </form>
     <button id="btn-search-flight">Search for flight</button>
 </div>
@@ -91,6 +109,7 @@
     <div id="wdw-profile" class="wdw">
         <span id="welcome-msg"></span>
     </div>
+
 </div>
 
 <!------------------ REGISTER ------------------------------->
@@ -102,9 +121,8 @@
 </div>
 
 <script>
-
+//--------------- REGISTER ----------------------------------------------
     $("#btnSubmitRegistration").click(function(){
-
 
     var fieldRegister = $("#field-register").val();
     var fieldPassword = $("#field-password").val();
@@ -136,7 +154,7 @@
         $(".wdw").css("display","none");
         $("#wdw-register").css("display","flex");
     });
-
+//--------------- LOGIN ---------------------------------------------------
     $("#btn-login").click(function(){
         var username = $("#lbl-username").val();
         var password = $("#lbl-password").val();
@@ -154,17 +172,17 @@
             }
         })
     });
-
-function displayProfile(jData){
-    $(".wdw").css("display","none");
-    $("#wdw-profile").css("display","flex");
-    $("#welcome-msg").text("Hello "+jData.username);
-    $(".navbar").empty().append("<button id='btn-logout'>Logout</button>");
-}
-
-$("#btn-search-flight").click(function(){
-    $("#wdw-search-results").css("display","flex");
-});
+//--------------- DISPLAY PROFILE ---------------------------------------------------
+    function displayProfile(jData){
+        $(".wdw").css("display","none");
+        $("#wdw-profile").css("display","flex");
+        $("#welcome-msg").text("Hello "+jData.username);
+        $(".navbar").empty().append("<button id='btn-logout'>Logout</button>");
+    }
+//--------------- BUTTON CLICKS -----------------------------------------------------
+    $("#btn-search-flight").click(function(){
+        $("#wdw-search-results").css("display","flex");
+    });
 
     $(document).on("click","#btn-logout",function(){
         $.ajax({
@@ -177,6 +195,7 @@ $("#btn-search-flight").click(function(){
             $("#btn-logout").css("display","none");
         })
     })
+
 </script>
 </body>
 
