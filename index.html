@@ -47,13 +47,13 @@
         <span>Return date</span>
         <span id="lbl-return"></span>
         <span id="lbl-trip-type"></span>
+        <div id="flight-details"></div>
     <button id="btn-change-search-details">Change details</button>
 </div>
 
 <!------------------ MAIN ------------------------------->
 
 <div class="main">
-    <div id="wdw-offers"></div>
     <div id="wdw-search-results" class="wdw">
         <div class="flight">
             <div class="flight-date">Date</div>
@@ -189,13 +189,26 @@
 
         $(".search-form-empty").css("display","none");
         $(".search-form-full").css("display","flex");
+        $(".wdw").hide();
+        $("#wdw-search-results").css("display","flex");
         $("#lbl-from").append(from);
         $("#lbl-to").append(to);
         $("#lbl-departure").append(depDate);
         $("#lbl-return").append(arrDate);
         $("#lbl-trip-type").append(tripType);
-    })
+    });
 
+    $(".flight").click(function(){
+        var depTime = $(this).find('.flight-departure-time').text();
+        var arrTime = $(this).find('.flight-arrival-time').text();
+        var price = $(this).find('.flight-price').text();
+        $("#flight-details").append("<div id='departureTime'>Departure time: <span>"+depTime+"</span></div>");
+        $("#flight-details").append("<div id='arrivalTime'>Arrival time: <span>"+arrTime+"</span></div>");
+        $("#flight-details").append("<div id='price'>Price: <span>"+price+"</span></div>");
+
+        $(".wdw").hide();
+        $("")
+    })
 </script>
 </body>
 
