@@ -15,6 +15,7 @@
 <body>
 <!-------------------- HEADER --------------------->
 <div class="navbar">
+    <h5 id="welcome-msg"></h5>
     <ul>
         <li><button id="btn-nav-login" class="nav-button btn btn-success">Login</button></li>
         <li><button id="btn-nav-register" class="nav-button btn btn-success">Register</button></li>
@@ -104,11 +105,8 @@
     <div id="wdw-login" class="wdw">
         <input type="text" id="lbl-username" class="form-control" placeholder="username">
         <input type="text" id="lbl-password" class="form-control" placeholder="password">
-        <input type="submit" id="btn-login" class="btn btn-warning" value="Log in">
+        <button type="submit" id="btn-login" class="btn btn-warning">Login</button>
         <div id="login-error-msg"></div>
-    </div>
-    <div id="wdw-profile" class="wdw">
-        <span id="welcome-msg"></span>
     </div>
     <div class="wdw-payment wdw">
         <form>
@@ -214,8 +212,6 @@
     });
 //--------------- DISPLAY PROFILE ---------------------------------------------------
     function displayProfile(jData){
-        $(".wdw").css("display","none");
-        $("#wdw-profile").css("display","flex");
         $("#welcome-msg").text("Hello "+jData.username);
         $(".nav-button").css("display","none");
         $("#btn-logout").css("display","flex");
@@ -234,6 +230,7 @@
             $("#wdw-offers").css("display","flex");
             $(".nav-button").css("display","flex");
             $("#btn-logout").css("display","none");
+            $("#welcome-msg").css("display","none");
         })
     });
     $(".btn-search-flight").click(function() {
@@ -265,6 +262,21 @@
         $(".wdw").hide();
         $(".wdw-payment").css("display","flex");
     })
+
+//------------------CHANGE DETAILS------------------
+
+    $("#btn-change-search-details").click(function(){
+
+      $(".search-form-empty").css("display","flex");
+      $(".search-form-full").css("display","none");
+      $("#wdw-search-results").css("display","none");
+      $("#lbl-trip-type").empty();
+      $("#lbl-return").empty();
+      $("#lbl-from").empty();
+      $("#lbl-to").empty();
+      $("#lbl-departure").empty();
+
+    });
 </script>
 </body>
 
