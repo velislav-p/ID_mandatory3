@@ -1,1 +1,1 @@
-[{"username":"veli","password":"123"},{"username":"1","password":"2"},{"username":"Veli","password":"ismylover"},{"username":"1","password":"2"},{"username":"1","password":"2"},{"username":null,"password":null},{"username":"5","password":"5"},{"username":"bitchass ho","password":"123"},{"username":"milly infinity","password":"123"}]
+[{"username":"veli","password":"123","surname":"1","email":"2","cvr":"3","creditCardNumber":"4","creditCardCvv":"6","creditCardDate":"5","address":"7"}]

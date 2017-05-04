@@ -3,6 +3,9 @@
   padding: 0;
   font-family: 'Raleway', sans-serif; }
 
+ul {
+  margin-bottom: 0px !important; }
+
 body {
   background-color: cadetblue !important;
   width: 100vw;
@@ -13,7 +16,8 @@ body {
 
 .navbar {
   background-color: #FFB300;
-  padding: 10px; }
+  padding: 10px;
+  margin-bottom: 0px !important; }
 
 .navbar ul {
   list-style: none; }
@@ -42,7 +46,8 @@ body {
 
 #wdw-search-results {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  justify-content: space-around; }
   #wdw-search-results ul {
     display: flex;
     flex-direction: column;
@@ -52,27 +57,41 @@ body {
 .hidden-input {
   margin-right: 5px !important; }
 
+#lbl-from, #lbl-to, #lbl-departure, #lbl-return, #lbl-trip-type {
+  margin-bottom: 7px; }
+
+.search-form-empty span {
+  margin-top: 7px; }
+
+.btn-search-flight {
+  margin-top: 5px; }
+
 .flight {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 3vh; }
+  margin-bottom: 3vh;
+  cursor: pointer; }
 
 .flight-date {
   width: 100%;
-  background-color: white; }
+  background-color: #FFB300; }
 
 .flight-body {
   display: flex;
   justify-content: space-between;
   width: 65%;
-  background-color: #8c4646; }
+  background-color: #ff7043;
+  padding: 5px; }
 
 .flight-price {
-  background-color: #F2ae72;
+  background-color: #ff7043;
   width: 30%; }
 
 .search-form-full {
+  display: none; }
+
+.wdw-profile-details-form {
   display: none; }
 
 @media only screen and (min-width: 480px) {
@@ -117,7 +136,7 @@ body {
     max-width: 250px;
     position: absolute;
     left: 0;
-    top: 52px; }
+    top: 55px; }
 
   #wdw-search-results {
     width: 100%;
@@ -125,9 +144,6 @@ body {
 
   .flight {
     width: 24%; }
-
-  .flight-body {
-    flex-direction: column; }
 
   .flight-price {
     display: flex;
