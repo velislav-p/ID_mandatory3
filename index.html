@@ -25,32 +25,37 @@
 <!------------------- SIDE BAR ------------------------->
 
 <div class="sidebar search-form-empty">
-        <span>From</span>
-        <input class="lbl-from form-control" type="text">
-        <span>To</span>
-        <input class="lbl-to form-control" type="text">
-        <span>Departure date</span>
-        <input class="lbl-departure form-control" type="text">
-        <span>Return date</span>
-        <input class="lbl-return form-control" type="text">
-        <span>One way</span>
-        <input class="lbl-oneWay" name="trip" type="radio" value="One way">
-        <span>Round trip</span>
-        <input class="lbl-roundTrip" name="trip" type="radio" value="Round trip">
+    <span>From</span>
+    <input class="lbl-from form-control" type="text">
+    <span>To</span>
+    <input class="lbl-to form-control" type="text">
+    <span>Departure date</span>
+    <input class="lbl-departure form-control" type="text">
+    <span>Return date</span>
+    <input class="lbl-return form-control" type="text">
+    <span>One way</span>
+    <input class="lbl-oneWay" name="trip" type="radio" value="One way">
+    <span>Round trip</span>
+    <input class="lbl-roundTrip" name="trip" type="radio" value="Round trip">
     <button class="btn-search-flight btn btn-warning">Search for flight</button>
 </div>
 
 <div class="sidebar search-form-full">
-        <span>From</span>
-        <span id="lbl-from"></span>
-        <span>To</span>
-        <span id="lbl-to"></span>
-        <span>Departure date</span>
-        <span id="lbl-departure"></span>
-        <span>Return date</span>
-        <span id="lbl-return"></span>
-        <span id="lbl-trip-type"></span>
-        <div id="flight-details"></div>
+    <span>From</span>
+    <span id="lbl-from"></span>
+    <span>To</span>
+    <span id="lbl-to"></span>
+    <span>Departure date</span>
+    <span id="lbl-departure"></span>
+    <span>Return date</span>
+    <span id="lbl-return"></span>
+    <span id="lbl-trip-type"></span>
+    <div id="flight-details">
+        <div id="departureTime"></div>
+        <div id="arrivalTime"></div>
+        <div id="price"></div>
+
+    </div>
     <button id="btn-change-search-details" class="btn btn-warning">Change details</button>
 </div>
 
@@ -99,7 +104,7 @@
     <div id="wdw-register" class="wdw">
         <input type="text" id="field-register" class="form-control" placeholder="Please type in the account name you desire">
         <input type="password" id="field-password" class="form-control" placeholder="Type in desired password">
-        <input type="submit" id="btn-registration" class="btn btn-warning" value="Register">
+        <input type="submit" id="btn-registration" class="btn btn-warning">
     </div>
     <div id="wdw-login" class="wdw">
         <input type="text" id="lbl-username" class="form-control" placeholder="username">
@@ -108,84 +113,139 @@
         <div id="login-error-msg"></div>
     </div>
     <div id="wdw-profile" class="wdw">
-        <span id="welcome-msg"></span>
+        <h1>Your payment details</h1>
+        <div class="wdw-profile-details-saved">
+            <div>No payment details saved.</div>
+        </div>
+        <button id="btn-save-payment-details" class="btn btn-success">Save payment details</button>
+        <div class="wdw-profile-details-form wdw">
+            <form>
+                <div class="wdw-payment-InputArea">
+                    <label for="paymentName">Write your Name:</label>
+                    <input type="text" id="paymentName" class="form-control" placeholder="Name">
+                </div>
+                <div class="wdw-payment-InputArea">
+                    <label for="paymentsurname">Write your Surname:</label>
+                    <input type="text" id="paymentSurname" class="form-control" placeholder="Surname">
+                </div>
+                <div class="wdw-payment-InputArea">
+                    <label for="paymentEmail">Write your E-mail here:</label>
+                    <input type="text" id="paymentEmail" class="form-control" placeholder="E-mail">
+                </div>
+                <div class="wdw-payment-InputArea">
+                    <label for="paymentCVR">Please type you company CVR here if available:</label>
+                    <input type="text" id="paymentCVR" class="form-control" placeholder="CVR/ COMPANY ID">
+                </div>
+                <div class="wdw-payment-InputArea">
+                    <label for="paymentCreditCardNumber">Enter you're credit card number here:</label>
+                    <input type="text" id="paymentCreditCardNumber" class="form-control" placeholder="Credit card number">
+                </div>
+                <div class="wdw-payment-InputArea">
+                    <label for="paymentCreditCardDate">Enter you're credit cards expiration date:</label>
+                    <input type="text" id="paymentCreditCardDate" class="form-control" placeholder="Credit card expiration date">
+                </div>
+                <div class="wdw-payment-InputArea">
+                    <label for="paymentCreditCardCVV">Enter the security number found on the back of your card:</label>
+                    <input type="text" id="paymentCreditCardCVV" class="form-control" placeholder="CVV number">
+                </div>
+                <div class="wdw-payment-InputArea">
+                    <label for="paymentAddress">In the field below type in your adress:</label>
+                    <input type="text" id="paymentAddress" class="form-control" placeholder="Adress">
+                </div>
+                <div class="wdw-payment-InputArea">
+                    <input type="button" class="btn btn-warning" id="btnSubmit" value="Submit!">
+                </div>
+            </form>
+        </div>
     </div>
+
     <div class="wdw-payment wdw">
         <form>
             <div class="wdw-payment-InputArea">
                 <label for="paymentName">Write your Name:</label>
-                <input type="submit" id="btn-autofill" value="Autofill" >
-                <input type="text" id="paymentName" class="form-control" >
+                <input type="text" id="paymentName" class="form-control" placeholder="Name">
             </div>
             <div class="wdw-payment-InputArea">
                 <label for="paymentsurname">Write your Surname:</label>
-                <input type="text" id="paymentSurname" class="form-control" >
+                <input type="text" id="paymentSurname" class="form-control" placeholder="Surname">
             </div>
             <div class="wdw-payment-InputArea">
                 <label for="paymentEmail">Write your E-mail here:</label>
-                <input type="text" id="paymentEmail" class="form-control" >
+                <input type="text" id="paymentEmail" class="form-control" placeholder="E-mail">
             </div>
             <div class="wdw-payment-InputArea">
-                <label for="paymentCvr">Please type you company CVR here if available:</label>
-                <input type="text" id="paymentCvr" class="form-control" >
+                <label for="paymentCVR">Please type you company CVR here if available:</label>
+                <input type="text" id="paymentCVR" class="form-control" placeholder="CVR/ COMPANY ID">
             </div>
             <div class="wdw-payment-InputArea">
-                <label for="paymentCreditCardNumber">Enter your credit card number here:</label>
-                <input type="text" id="paymentCreditCardNumber" class="form-control">
+                <label for="paymentCreditCardNumber">Enter you're credit card number here:</label>
+                <input type="text" id="paymentCreditCardNumber" class="form-control" placeholder="Credit card number">
             </div>
             <div class="wdw-payment-InputArea">
-                <label for="paymentCreditCardDate">Enter your credit cards expiration date:</label>
-                <input type="text" id="paymentCreditCardDate" class="form-control" >
+                <label for="paymentCreditCardDate">Enter you're credit cards expiration date:</label>
+                <input type="text" id="paymentCreditCardDate" class="form-control" placeholder="Credit card expiration date">
             </div>
             <div class="wdw-payment-InputArea">
                 <label for="paymentCreditCardCVV">Enter the security number found on the back of your card:</label>
-                <input type="text" id="paymentCreditCardCVV" class="form-control" >
+                <input type="text" id="paymentCreditCardCVV" class="form-control" placeholder="CVV number">
             </div>
             <div class="wdw-payment-InputArea">
-                <label for="paymentAdress">In the field below type in your address:</label>
-                <input type="text" id="paymentAdress" class="form-control" >
+                <label for="paymentAdress">In the field below type in your adress:</label>
+                <input type="text" id="paymentAdress" class="form-control" placeholder="Adress">
             </div>
             <div class="wdw-payment-InputArea">
-                <input type="button" class="btn btn-warning" id="btn-submitPayment" value="Submit!">
+                <label for="paymentAreaCode">Enter area code:</label>
+                <input type="text" id="paymentAreaCode" class="form-control" placeholder="Area code">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentCity">Enter city:</label>
+                <input type="text" id="paymentCity" class="form-control" placeholder="City">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <label for="paymentTelephoneNumber">Enter telephone number:</label>
+                <input type="text" id="paymentTelephoneNumber" class="form-control" placeholder="Telephone #">
+            </div>
+            <div class="wdw-payment-InputArea">
+                <input type="button" class="btn btn-warning" id="btnSubmit" value="Submit!">
             </div>
         </form>
     </div>
-    <div class="wdw-receipt wdw" >
-    </div>
-
 </div>
 
 <!------------------------JAVA---------------------->
 <script>
-//--------------- REGISTER ----------------------------------------------
+    //--------------- REGISTER ----------------------------------------------
+
     $("#btn-registration").click(function(){
 
-    var fieldRegister = $("#field-register").val();
-    var fieldPassword = $("#field-password").val();
+        var fieldRegister = $("#field-register").val();
+        var fieldPassword = $("#field-password").val();
+        //console.log("x");
 
+        $.ajax({
+            "url":"services/register.php",
+            cache:false ,
+            "method":"post",
+            "dataType":"JSON",
+            "data":  {"username":fieldRegister , "password": fieldPassword}
+        }).done(function (jData) {
 
-    $.ajax({
-        "url":"services/register.php",
-        cache:false ,
-        "method":"post",
-        "dataType":"JSON",
-        "data":  {"username":fieldRegister , "password": fieldPassword}
-    }).done(function (jData) {
+            displayProfile(jData);
 
-        displayProfile(jData);
-
-    })
+        })
     });
 
     $("#btn-nav-login").click(function(){
         $(".wdw").css("display","none");
         $("#wdw-login").css("display","flex");
     });
+
     $("#btn-nav-register").click(function(){
         $(".wdw").css("display","none");
         $("#wdw-register").css("display","flex");
     });
-//--------------- LOGIN ---------------------------------------------------
+    //--------------- LOGIN ---------------------------------------------------
+
     $("#btn-login").click(function(){
         var username = $("#lbl-username").val();
         var password = $("#lbl-password").val();
@@ -203,7 +263,9 @@
             }
         })
     });
-//--------------- DISPLAY PROFILE ---------------------------------------------------
+
+    //--------------- DISPLAY PROFILE ---------------------------------------------------
+
     function displayProfile(jData){
         $(".wdw").css("display","none");
         $("#wdw-profile").css("display","flex");
@@ -211,7 +273,7 @@
         $(".nav-button").css("display","none");
         $("#btn-logout").css("display","flex");
     }
-//--------------- BUTTON CLICKS -----------------------------------------------------
+    //--------------- BUTTON CLICKS -----------------------------------------------------
     $("#btn-search-flight").click(function(){
         $("#wdw-search-results").css("display","flex");
     });
@@ -227,6 +289,7 @@
             $("#btn-logout").css("display","none");
         })
     });
+
     $(".btn-search-flight").click(function() {
         var from = $(".lbl-from").val();
         var to = $(".lbl-to").val();
@@ -249,28 +312,62 @@
         var depTime = $(this).find('.flight-departure-time').text();
         var arrTime = $(this).find('.flight-arrival-time').text();
         var price = $(this).find('.flight-price').text();
-        $("#flight-details").append("<div id='departureTime'>Departure time: <span>"+depTime+"</span></div>");
-        $("#flight-details").append("<div id='arrivalTime'>Arrival time: <span>"+arrTime+"</span></div>");
-        $("#flight-details").append("<div id='price'>Price: <span>"+price+"</span></div>");
+
+        $("#departureTime").append("Departure time: <span>"+depTime+"</span>");
+        $("#arrivalTime").append("Arrival time: <span>"+arrTime+"</span>");
+        $("#price").append("Price: <span>"+price+"</span>");
 
         $(".wdw").hide();
         $(".wdw-payment").css("display","flex");
     });
 
-
-//------------ PAYMENT ----------------------------------------------
-    $("#btn-submitPayment").click(function () {
-
-        var paymentName     = $("#paymentName").val();
-        var paymentSurname  = $("#paymentSurname").val();
-        var paymentCvr      = $("#paymentCvr").val();
-
-        $(".wdw").hide();
-        $(".wdw-receipt").css("display","flex").append("<div>"+paymentCvr+"</div><div>"+paymentSurname+"</div><div>"+paymentCvr+"</div>");
-
-
+    $("#btn-save-payment-details").click(function(){
+        $(".wdw-profile-details-form").css("display","flex");
     });
 
+    $("#btnSubmit").click(function() {
+        var name = $("#paymentName").val();
+        var surname = $("#paymentSurname").val();
+        var email = $("#paymentEmail").val();
+        var cvr = $("#paymentCVR").val();
+        var creditCardNumber = $("#paymentCreditCardNumber").val();
+        var creditCardCvv = $("#paymentCreditCardCVV").val();
+        var creditCardDate = $("#paymentCreditCardDate").val();
+        var address = $("#paymentAddress").val();
+
+
+        $.ajax({
+            "url": "services/save-details.php",
+            "method": "POST",
+            "data": {
+                "username": name,
+                "surname": surname,
+                "email": email,
+                "cvr": cvr,
+                "creditCardNumber": creditCardNumber,
+                "creditCardCvv": creditCardCvv,
+                "creditCardDate": creditCardDate,
+                "address": address
+            }
+        }).done(function (jData) {
+            $(".wdw-profile-details-saved").empty().append("<div>Name: " + name + " " + surname + "</div><div>Email: " + email + "</div><div>CVR: " + cvr + "</div>\
+              <div>Credit card number: " + creditCardNumber + "</div><div>Address: " + address + "</div>");
+        });
+    });
+
+    $("#btn-change-search-details").click(function() {
+        $(".search-form-empty").css("display","flex");
+        $(".search-form-full").css("display","none");
+        $("#wdw-search-results").css("display","none");
+        $("#lbl-trip-type").empty();
+        $("#lbl-return").empty();
+        $("#lbl-from").empty();
+        $("#lbl-to").empty();
+        $("#lbl-departure").empty();
+        $("#departureTime").empty();
+        $("#arrivalTime").empty();
+        $("#price").empty();
+    });
 
 </script>
 </body>
