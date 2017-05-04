@@ -1,1 +1,5 @@
+<<<<<<< Updated upstream
 [{"username":"veli","password":"123","surname":"1","email":"2","cvr":"3","creditCardNumber":"4","creditCardCvv":"6","creditCardDate":"5","address":"7"}]
+=======
+[{"username":"veli","password":"123"},{"username":"1","password":"2"},{"username":"Veli","password":"ismylover"},{"username":"1","password":"2"},{"username":"1","password":"2"},{"username":null,"password":null},{"username":"5","password":"5"},{"username":"bitchass ho","password":"123"},{"username":"milly infinity","password":"123"},{"username":"678","password":"876"},{"username":"1234567","password":"765432"},{"username":"123","password":"4344434"},{"username":"12345","password":"09876"},{"username":"123","password":"678"},{"username":"123","password":"678"},{"username":"123","password":"789"}]
+>>>>>>> Stashed changes
