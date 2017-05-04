@@ -16,8 +16,9 @@
 <!-------------------- HEADER --------------------->
 <div class="navbar">
     <ul>
-        <li><button id="btn-nav-login" class="btn btn-success">Login</button></li>
-        <li><button id="btn-nav-register" class="btn btn-success">Register</button></li>
+        <li><button id="btn-nav-login" class="nav-button btn btn-success">Login</button></li>
+        <li><button id="btn-nav-register" class="nav-button btn btn-success">Register</button></li>
+        <li><button id='btn-logout' class='btn btn-success'>Logout</button></li>
     </ul>
 </div>
 
@@ -216,7 +217,8 @@
         $(".wdw").css("display","none");
         $("#wdw-profile").css("display","flex");
         $("#welcome-msg").text("Hello "+jData.username);
-        $(".navbar").empty().append("<button id='btn-logout'>Logout</button>");
+        $(".nav-button").css("display","none");
+        $("#btn-logout").css("display","flex");
     }
 //--------------- BUTTON CLICKS -----------------------------------------------------
     $("#btn-search-flight").click(function(){

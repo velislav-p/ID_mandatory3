@@ -18,6 +18,9 @@ body {
 .navbar ul {
   list-style: none; }
 
+#btn-logout {
+  display: none; }
+
 .wdw-payment {
   padding: 5px !important; }
 
@@ -68,9 +71,6 @@ body {
 .flight-price {
   background-color: #F2ae72;
   width: 30%; }
-
-#btn-logout {
-  display: none; }
 
 .search-form-full {
   display: none; }
