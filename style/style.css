@@ -17,13 +17,23 @@ body {
 .navbar {
   background-color: #FFB300;
   padding: 10px;
-  margin-bottom: 0px !important; }
+  margin-bottom: 0px !important;
+  height: 95px; }
 
 .navbar ul {
   list-style: none; }
 
 #btn-logout {
   display: none; }
+
+#wdw-login {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px; }
+
+#wdw-login input {
+  width: 40%;
+  margin-right: 3px; }
 
 .wdw-payment {
   padding: 5px !important; }
@@ -66,6 +76,9 @@ body {
 .btn-search-flight {
   margin-top: 5px; }
 
+#btn-nav-register {
+  margin-top: 5px; }
+
 .flight {
   display: flex;
   flex-wrap: wrap;
@@ -91,8 +104,10 @@ body {
 .search-form-full {
   display: none; }
 
-.wdw-profile-details-form {
-  display: none; }
+#welcome-msg {
+  position: absolute;
+  top: 8px;
+  left: 8px; }
 
 @media only screen and (min-width: 480px) {
   body {
@@ -103,11 +118,15 @@ body {
   .navbar {
     width: 100%;
     display: flex;
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    height: 55px; }
     .navbar ul {
       display: flex;
       width: 25%;
       justify-content: space-between; }
+
+  #btn-nav-register {
+    margin-top: 0px; }
 
   #search-results {
     flex-direction: row;
