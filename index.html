@@ -360,14 +360,14 @@
     var cvr;
     var address;
     $("#btn-save-payment").click(function() {
-        name = $("#paymentName").val();
-        surname = $("#paymentSurname").val();
-        email = $("#paymentEmail").val();
-        cvr = $("#paymentCVR").val();
-        var creditCardNumber = $("#paymentCreditCardNumber").val();
-        var creditCardCvv = $("#paymentCreditCardCVV").val();
-        var creditCardDate = $("#paymentCreditCardDate").val();
-        address = $("#paymentAddress").val();
+        name = $(".paymentName").val();
+        surname = $(".paymentSurname").val();
+        email = $(".paymentEmail").val();
+        cvr = $(".paymentCVR").val();
+        var creditCardNumber = $(".paymentCreditCardNumber").val();
+        var creditCardCvv = $(".paymentCreditCardCVV").val();
+        var creditCardDate = $(".paymentCreditCardDate").val();
+        address = $(".paymentAddress").val();
 
         $(".wdw-profile-details-form").css("display","none");
         $.ajax({
