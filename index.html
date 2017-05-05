@@ -159,6 +159,7 @@
         </div>
     </div>
     <div class="wdw-payment wdw">
+        <input type="submit" id="btn-autofill" value="Autofill">
         <form>
             <div class="wdw-payment-InputArea">
                 <label>Write your Name:</label>
@@ -191,18 +192,6 @@
             <div class="wdw-payment-InputArea">
                 <label>In the field below type in your address:</label>
                 <input type="text" class="paymentAddress form-control">
-            </div>
-            <div class="wdw-payment-InputArea">
-                <label>Enter area code:</label>
-                <input type="text" class="paymentAreaCode form-control" placeholder="Area code">
-            </div>
-            <div class="wdw-payment-InputArea">
-                <label>Enter city:</label>
-                <input type="text" class="paymentCity form-control" placeholder="City">
-            </div>
-            <div class="wdw-payment-InputArea">
-                <label>Enter telephone number:</label>
-                <input type="text" class="paymentTelephoneNumber form-control" placeholder="Telephone #">
             </div>
             <div class="wdw-payment-InputArea">
                 <input type="button" class="btn btn-warning" id="btn-complete-payment" value="Submit!">
@@ -301,7 +290,15 @@
         $("#welcome-msg").text("Hello "+jData.username);
         $(".nav-button").css("display","none");
         $("#btn-logout").css("display","flex");
-        console.log("x");
+        $.ajax({
+            "url": "services/retrieve-details.php",
+            "method": "POST",
+            "data": {"username": jData.username},
+            "dataType":"json"
+        }).done(function (jDataNew) {
+            $(".wdw-profile-details-saved").empty().append("<div>Name: " + jDataNew.username + " " + jDataNew.surname + "</div><div>Email: " + jDataNew.email + "</div><div>CVR: " + jDataNew.cvr + "</div>\
+              <div>Credit card number: " + jDataNew.creditCardNumber + "</div><div>Address: " + jDataNew.address + "</div>");
+        });
     }
     //--------------- BUTTON CLICKS -----------------------------------------------------
 
@@ -438,6 +435,32 @@
         $("#btn-changeFlight").hide();
 
     });
+
+    $("#btn-autofill").click(function(){
+        console.log("hello");
+        $.ajax({
+            "url":"services/retrieve-details.php",
+            "method":"GET",
+            "data":{"username":name},
+            "dataType":"JSON"
+        }).done(function(jData){
+            console.log(jData);
+            if(jData.status == "error"){
+                $(".wdw-payment").append("<div>You are not logged in!</div>");
+            } else {
+                $(".paymentName").val(jData.username);
+                $(".paymentSurname").val(jData.surname);
+                $(".paymentEmail").val(jData.email);
+                $(".paymentCVR").val(jData.cvr);
+                $(".paymentCreditCardDate").val(jData.creditCardDate);
+                $(".paymentCreditCardNumber").val(jData.creditCardNumber);
+                $(".paymentCreditCardCVV").val(jData.creditCardCvv);
+                $(".paymentAddress").val(jData.address);
+            }
+        }).fail(function(jData){
+            console.log(jData);
+        })
+    })
 
 </script>
 </body>
