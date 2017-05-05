@@ -64,41 +64,42 @@
 <div class="main">
 
     <div id="wdw-search-results" class="wdw">
+
         <div class="flight">
-            <div class="flight-date"><h5>Date</h5></div>
+            <div class="flight-date"><h4>We suggest :</h4></div>
             <div class="flight-body">
-                <span class="flight-departure-time">23.00</span>
+                <span class="flight-departure-time">Departure : 18.00</span>
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                <span class="flight-arrival-time">01.00</span>
+                <span class="flight-arrival-time">Arrival : 01.00</span>
             </div>
-            <div class="flight-price">230 <span class="currency">DKK</span></div>
+            <div class="flight-price">290 <span class="currency">DKK</span></div>
         </div>
         <div class="flight">
-            <div class="flight-date"><h5>Date</h5></div>
+            <div class="flight-date"><h4>We suggest :</h4></div>
             <div class="flight-body">
-                <span class="flight-departure-time">23.00</span>
+                <span class="flight-departure-time">Departure : 09.00</span>
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                <span class="flight-arrival-time">01.00</span>
+                <span class="flight-arrival-time">Arrival : 16.00</span>
             </div>
-            <div class="flight-price">230 <span class="currency">DKK</span></div>
+            <div class="flight-price">410 <span class="currency">DKK</span></div>
         </div>
         <div class="flight">
-            <div class="flight-date"><h5>Date</h5></div>
+            <div class="flight-date"><h4>We suggest :</h4></div>
             <div class="flight-body">
-                <span class="flight-departure-time">23.00</span>
+                <span class="flight-departure-time">Departure : 14.00</span>
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                <span class="flight-arrival-time">01.00</span>
+                <span class="flight-arrival-time">Arrival : 21.00</span>
             </div>
-            <div class="flight-price">230 <span class="currency">DKK</span></div>
+            <div class="flight-price">730 <span class="currency">DKK</span></div>
         </div>
         <div class="flight">
-            <div class="flight-date"><h5>Date</h5></div>
+            <div class="flight-date"><h4>We suggest :</h4></div>
             <div class="flight-body">
-                <span class="flight-departure-time">23.00</span>
+                <span class="flight-departure-time">Departure : 21.00</span>
                 <i class="fa fa-arrow-right" aria-hidden="true"></i>
-                <span class="flight-arrival-time">01.00</span>
+                <span class="flight-arrival-time">Arrival : 05.00</span>
             </div>
-            <div class="flight-price">230 <span class="currency">DKK</span></div>
+            <div class="flight-price">570 <span class="currency">DKK</span></div>
         </div>
     </div>
     <div id="wdw-register" class="wdw basic-form">
@@ -159,7 +160,6 @@
         </div>
     </div>
     <div class="wdw-payment wdw">
-        <input type="submit" id="btn-autofill" value="Autofill">
         <form>
             <div class="wdw-payment-InputArea">
                 <label>Write your Name:</label>
@@ -195,6 +195,7 @@
             </div>
             <div class="wdw-payment-InputArea">
                 <input type="button" class="btn btn-warning" id="btn-complete-payment" value="Submit!">
+                <input type="submit" id="btn-autofill" class="btn btn-success" value="Autofill">
             </div>
         </form>
     </div>
@@ -301,6 +302,11 @@
         });
     }
     //--------------- BUTTON CLICKS -----------------------------------------------------
+
+    $(document).on("click","#welcome-msg",function() {
+      var jData = {"username":name};
+      displayProfile(jData);
+    });
 
     $(document).on("click","#btn-logout",function(){
         $.ajax({
@@ -446,7 +452,7 @@
         }).done(function(jData){
             console.log(jData);
             if(jData.status == "error"){
-                $(".wdw-payment").append("<div>You are not logged in!</div>");
+                $(".wdw-payment").append("<div>You have not filled in payment details</div>");
             } else {
                 $(".paymentName").val(jData.username);
                 $(".paymentSurname").val(jData.surname);

@@ -111,24 +111,54 @@ body{
   justify-content:space-between;
   margin-bottom:3vh;
   cursor: pointer;
+  color: cadetblue;
 
 }
 .flight-date{
   width:100%;
   background-color: $foreground-color;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px 20px 0px 0px;
+  border-bottom: solid cadetblue;
 }
+
+#btn-nav-login {
+  margin-right: 3px;
+}
+
+#btn-changeFlight {
+  margin-top: 5px;
+}
+
 .flight-body {
   display:flex;
   justify-content:space-between;
-  width:65%;
-  background-color:$highlight-color;
-  padding: 5px;
+  align-items: center;
+  width:100%;
+  height: 100px;
+  background-color:$foreground-color;
+  padding: 10px;
 }
 .flight-price{
-  background-color:$highlight-color;
-  width:30%;
+  background-color:$foreground-color;
+  width:100%;
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  align-items:center;
+  border-radius: 0px 0px 20px 20px;
+  border-top: solid cadetblue;
 
 }
+
+#wdw-receipt {
+  color: cadetblue;
+  background-color: $foreground-color;
+  padding: 10px;
+  border-radius: 20px 20px 20px 20px;
+}
+
 .search-form-full{
   display:none;
 }
@@ -137,6 +167,7 @@ body{
   position: absolute;
   top: 8px;
   left: 8px;
+  cursor: pointer;
 }
 #wdw-profile{
   display:flex;
