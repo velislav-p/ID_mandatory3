@@ -160,6 +160,7 @@
         </div>
     </div>
     <div class="wdw-payment wdw">
+        <input type="submit" id="btn-autofill" class="btn btn-success" value="Autofill">
         <form>
             <div class="wdw-payment-InputArea">
                 <label>Write your Name:</label>
@@ -197,7 +198,7 @@
                 <input type="button" class="btn btn-warning" id="btn-complete-payment" value="Submit!">
             </div>
         </form>
-        <input type="submit" id="btn-autofill" class="btn btn-success" value="Autofill">
+
     </div>
     <div id="wdw-receipt" class="wdw">
         <h3>Congratulations! Your booking is complete</h3>
@@ -251,7 +252,6 @@
         $("#wdw-login").css("display","flex");
         $(".sidebar").css("order","3");
         $(".main").css("order","2");
-        $(".search-form-empty").css("display","flex");
 
     });
 
@@ -260,7 +260,6 @@
         $("#wdw-register").css("display","flex");
         $(".sidebar").css("order","3");
         $(".main").css("order","2");
-        $(".search-form-empty").css("display","flex");
     });
     //--------------- LOGIN ---------------------------------------------------
 
@@ -277,6 +276,8 @@
         }).done(function(jData){
             if(jData.status == "ok"){
                 displayProfile(jData);
+                $(".search-form-full").append("<button id='btn-resume-booking' class='btn btn-warning'>Resume booking</button>")
+
             }else{
                 $("#login-error-msg").text("No such user found");
             }
@@ -316,6 +317,7 @@
             $(".wdw").css("display","none");
             $(".main").css("order","3");
             $(".search-form-empty").css("display","flex");
+            $(".search-form-full").css("display","none");
             $(".nav-button").css("display","inline");
             $("#btn-logout").css("display","none");
             $("#welcome-msg").empty();
@@ -452,7 +454,7 @@
         }).done(function(jData){
             console.log(jData);
             if(jData.status == "error"){
-                $(".wdw-payment").append("<div>You have not filled in payment details</div>");
+                $(".wdw-payment").prepend("<div>You have not filled in payment details</div>");
             } else {
                 $(".paymentName").val(jData.username);
                 $(".paymentSurname").val(jData.surname);
@@ -466,6 +468,11 @@
         }).fail(function(jData){
             console.log(jData);
         })
+    });
+    $(document).on("click","#btn-resume-booking",function(){
+        $(".wdw").hide();
+        $("#wdw-search-results").css("display","flex");
+        $(this).css("display","none");
     })
 
 </script>

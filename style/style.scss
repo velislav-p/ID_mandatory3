@@ -60,9 +60,7 @@ body{
   display: none;
 }
 
-#btn-change-search-details {
-  margin-top: 5px;
-}
+
 
 #btn-complete-payment {
   width: 100%;
@@ -136,9 +134,11 @@ body{
   margin-right: 3px;
 }
 
-#btn-changeFlight {
-  margin-top: 5px;
-}
+.sidebar{
+  button{
+      margin-top: 5px;
+    }
+  }
 
 .flight-body {
   display:flex;
@@ -160,14 +160,12 @@ body{
   border-top: solid cadetblue;
 
 }
-
 #wdw-receipt {
   color: cadetblue;
   background-color: $foreground-color;
   padding: 10px;
   border-radius: 20px 20px 20px 20px;
 }
-
 .search-form-full{
   display:none;
 }
