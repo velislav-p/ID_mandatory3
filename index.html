@@ -15,6 +15,7 @@
 <body>
 <!-------------------- HEADER --------------------->
 <div class="navbar">
+        <h5 id="welcome-msg"></h5>
         <button id="btn-nav-login" class="nav-button btn btn-success">Login</button>
         <button id="btn-nav-register" class="nav-button btn btn-success">Register</button>
         <button id='btn-logout' class='btn btn-success'>Logout</button>
@@ -300,6 +301,7 @@
         $("#welcome-msg").text("Hello "+jData.username);
         $(".nav-button").css("display","none");
         $("#btn-logout").css("display","flex");
+        console.log("x");
     }
     //--------------- BUTTON CLICKS -----------------------------------------------------
 
@@ -313,6 +315,7 @@
             $(".search-form-empty").css("display","flex");
             $(".nav-button").css("display","inline");
             $("#btn-logout").css("display","none");
+            $("#welcome-msg").empty();
         })
     });
     var from;
