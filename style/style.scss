@@ -49,6 +49,7 @@ body{
 
 .wdw-payment {
   padding: 5px !important;
+  flex-direction: column;
 }
 
 .wdw-payment-InputArea {
@@ -57,6 +58,14 @@ body{
 }
 .wdw-receipt{
   display: none;
+}
+
+#btn-change-search-details {
+  margin-top: 5px;
+}
+
+#btn-complete-payment {
+  width: 100%;
 }
 
 .sidebar {
