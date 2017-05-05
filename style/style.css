@@ -9,7 +9,9 @@ ul {
 body {
   background-color: cadetblue !important;
   width: 100vw;
-  max-width: 100%; }
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap; }
 
 .wdw:not(#wdw-offers) {
   display: none; }
@@ -18,22 +20,18 @@ body {
   background-color: #FFB300;
   padding: 10px;
   margin-bottom: 0px !important;
-  height: 95px; }
-
-.navbar ul {
-  list-style: none; }
+  height: 95px;
+  width: 100%;
+  order: 1; }
 
 #btn-logout {
   display: none; }
 
-#wdw-login {
+.basic-form {
   display: flex;
-  flex-wrap: wrap;
-  width: 500px; }
-
-#wdw-login input {
-  width: 40%;
-  margin-right: 3px; }
+  flex-direction: column;
+  width: 100%;
+  order: 2; }
 
 .wdw-payment {
   padding: 5px !important; }
@@ -47,15 +45,19 @@ body {
 
 .sidebar {
   background-color: #ff7043;
-  padding: 10px; }
-
-.sidebar {
+  padding: 10px;
   display: flex;
+  width: 100%;
   flex-direction: column;
-  justify-content: center; }
+  justify-content: center;
+  order: 2; }
 
 .main {
-  padding: 10px; }
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  order: 3; }
 
 #wdw-search-results {
   display: flex;
@@ -77,9 +79,6 @@ body {
   margin-top: 7px; }
 
 .btn-search-flight {
-  margin-top: 5px; }
-
-#btn-nav-register {
   margin-top: 5px; }
 
 .flight {
@@ -112,12 +111,18 @@ body {
   top: 8px;
   left: 8px; }
 
+#wdw-profile {
+  display: flex;
+  flex-direction: column; }
+
+#wdw-receipt {
+  flex-direction: column; }
+
 @media only screen and (min-width: 480px) {
   body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center; }
-
   .navbar {
     width: 100%;
     display: flex;
@@ -127,50 +132,39 @@ body {
       display: flex;
       width: 25%;
       justify-content: space-between; }
-
   #btn-nav-register {
     margin-top: 0px; }
-
   #search-results {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between; }
-
   .sidebar {
     width: 30%; }
-
   .main {
     width: 60%; }
-
   .flight {
     width: 49%; }
-
   .currency {
     font-size: 0.5em; } }
+
 @media only screen and (min-width: 768px) {
   .main {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 64%; }
-
   .sidebar {
     max-width: 250px;
     position: absolute;
     left: 0;
     top: 55px; }
-
   #wdw-search-results {
     width: 100%;
     flex-direction: row; }
-
   .flight {
     width: 24%; }
-
   .flight-price {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; } }
-
-/*# sourceMappingURL=style.css.map */

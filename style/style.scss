@@ -19,6 +19,8 @@ body{
   background-color: $background-color !important;
   width:100vw;
   max-width:100%;
+  display:flex;
+  flex-wrap:wrap;
 
 }
 .wdw:not(#wdw-offers){
@@ -30,23 +32,19 @@ body{
   padding:10px;
   margin-bottom: 0px !important;
   height: 95px;
+  width:100%;
+  order:1;
 }
-.navbar ul {
-  list-style:none;
-}
+
 #btn-logout{
   display:none;
 }
 
-#wdw-login {
+.basic-form {
   display: flex;
-  flex-wrap: wrap;
-  width: 500px;
-}
-
-#wdw-login input {
-  width: 40%;
-  margin-right: 3px;
+  flex-direction:column;
+  width: 100%;
+  order:2;
 }
 
 .wdw-payment {
@@ -64,17 +62,19 @@ body{
 .sidebar {
   background-color: $highlight-color;
   padding:10px;
-
-}
-
-.sidebar{
   display:flex;
+  width:100%;
   flex-direction:column;
   justify-content:center;
+  order:2;
 }
 
 .main {
+  width:100%;
   padding:10px;
+  display:flex;
+  justify-content:center;
+  order:3;
 }
 
 #wdw-search-results {
@@ -102,10 +102,6 @@ body{
 }
 
 .btn-search-flight {
-  margin-top: 5px;
-}
-
-#btn-nav-register {
   margin-top: 5px;
 }
 
@@ -141,6 +137,13 @@ body{
   position: absolute;
   top: 8px;
   left: 8px;
+}
+#wdw-profile{
+  display:flex;
+  flex-direction:column;
+}
+#wdw-receipt{
+  flex-direction:column;
 }
 
 @import "media-queries.scss";
